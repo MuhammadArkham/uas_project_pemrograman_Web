@@ -1,23 +1,81 @@
+# Project UAS Pemrograman Web
+
 Nama : Muhammad Arkhamullah Rifai Asshidiq
-Project UAS Pemrograman Web
 
-## Deskripsi
-Aplikasi manajemen inventaris toko elektronik berbasis web dengan konsep OOP Modular dan desain futuristik (Arkham Theme). Aplikasi ini memiliki dua hak akses: Admin (Full Control) dan User (View Only).
+NIM  : 312410545
 
-## Fitur Utama
-1. **Arsitektur OOP & Modular:** Menggunakan Class Database dan struktur modul terpisah.
-2. **Routing System:** URL bersih menggunakan .htaccess.
-3. **Multi-User Login:**
-   - **Admin:** Login, Tambah, Edit, Hapus Data.
-   - **User:** Login, Melihat Katalog, Searching, Pagination.
-4. **Desain Responsive:** Menggunakan Bootstrap 5 dengan kustomisasi CSS Glassmorphism.
+PEMROGRAMAN WEB 1
 
-## Cara Instalasi
-1. Copy folder `uas_project` ke `htdocs`.
-2. Buka PHPMyAdmin, buat database baru bernama `db_toko`.
-3. Import file `db_toko.sql` yang ada di dalam folder project.
-4. Akses di browser: `localhost/uas_project`.
 
-## Akun Login
-- **Admin:** Username: `admin`, Password: `admin123`
-- **User:** Username: `user`, Password: `user123`
+
+---
+
+## 📖 Deskripsi Project
+**Arkham Store** adalah aplikasi berbasis web yang dirancang untuk mengelola inventaris toko elektronik. Aplikasi ini dibangun menggunakan **PHP Native** dengan pendekatan **Object-Oriented Programming (OOP)** dan struktur **Modular** sesuai dengan ketentuan tugas.
+
+Selain fungsionalitas CRUD (Create, Read, Update, Delete), aplikasi ini  menggunakan framework **Bootstrap 5** dengan kustomisasi *Glassmorphism*.
+
+### 🎯 Tujuan Project
+Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Web, dengan fokus pemenuhan syarat:
+1.  Implementasi konsep **OOP (Class & Object)** dalam koneksi database.
+2.  Penerapan struktur **Modular** untuk kemudahan maintenance.
+3.  Penggunaan **Routing App** (Pretty URL) menggunakan `.htaccess`.
+4.  Desain **Responsive Mobile-First** menggunakan Bootstrap.
+5.  Sistem Login Multi-Role (Admin & User).
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+* **Backend:** PHP Native (v8.x recommended)
+* **Database:** MySQL / MariaDB
+* **Frontend:** HTML5, CSS3, Bootstrap 5.3
+* **Styling:** Custom CSS (Neon & Glassmorphism Effects)
+* **Server:** Apache (XAMPP/Laragon)
+
+---
+
+## ✨ Fitur Utama
+
+### 1. Arsitektur & Keamanan
+* ✅ **OOP Database Wrapper:** Semua koneksi dan query database dibungkus dalam Class `Database.php`.
+* ✅ **Modular System:** File logika dipisah berdasarkan modul (`auth`, `barang`, `home`).
+* ✅ **Routing System:** URL bersih dan aman menggunakan `.htaccess` (contoh: `?mod=barang&page=katalog`).
+* ✅ **Session Management:** Sistem login aman dengan validasi sesi.
+
+### 2. Fitur Fungsional
+* **Multi-Role Login:**
+    * 🔐 **Admin:** Akses penuh (CRUD), Manajemen Data, Upload Gambar.
+    * 👤 **User:** View Only, Searching, Filtering, Pagination.
+* **Manajemen Produk (CRUD):** Tambah, Edit, Hapus, dan Lihat data barang.
+* **Upload Gambar:** Fitur upload gambar produk ke server.
+* **Pencarian Canggih:** Filter barang berdasarkan Nama atau Kategori.
+* **Pagination:** Pembagian halaman data otomatis jika produk banyak.
+
+---
+
+## 📂 Struktur Direktori
+Struktur folder disusun rapi untuk memisahkan *Logic*, *View*, dan *Assets*:
+
+```text
+uas_project/
+├── .htaccess           # Konfigurasi Routing (RewriteRule)
+├── config.php          # Konfigurasi Database Credentials
+├── index.php           # Main Router (Gerbang Utama Aplikasi)
+├── db_toko.sql         # File Database SQL
+├── README.md           # Dokumentasi Project
+│
+├── class/              # Core Logic (OOP)
+│   └── Database.php    # Class untuk koneksi & query DB
+│
+├── img/                # Penyimpanan file gambar produk
+│   ├── mouse.jpg
+│   └── ...
+│
+├── module/             # Modular Business Logic
+│   ├── auth/           # Login & Logout logic
+│   ├── barang/         # CRUD Barang (Katalog, Tambah, Edit, Hapus)
+│   └── home/           # Dashboard Page
+│
+└── template/           # Layout Views
+    ├── header.php      # Navbar & CSS Links
+    └── footer.php      # Copyright & JS Scripts
