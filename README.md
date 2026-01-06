@@ -207,29 +207,4 @@ Validasi konfirmasi (alert) sebelum menghapus data untuk mencegah kesalahan.
 
 ---
 
-## 📂 Struktur Direktori
-Struktur folder disusun rapi untuk memisahkan *Logic*, *View*, dan *Assets*:
 
-```text
-uas_project/
-├── .htaccess           # Konfigurasi Routing (RewriteRule)
-├── config.php          # Konfigurasi Database Credentials
-├── index.php           # Main Router (Gerbang Utama Aplikasi)
-├── db_toko.sql         # File Database SQL
-├── README.md           # Dokumentasi Project
-│
-├── class/              # Core Logic (OOP)
-│   └── Database.php    # Class untuk koneksi & query DB
-│
-├── img/                # Penyimpanan file gambar produk
-│   ├── mouse.jpg
-│   └── ...
-│
-├── module/             # Modular Business Logic
-│   ├── auth/           # Login & Logout logic
-│   ├── barang/         # CRUD Barang (Katalog, Tambah, Edit, Hapus)
-│   └── home/           # Dashboard Page
-│
-└── template/           # Layout Views
-    ├── header.php      # Navbar & CSS Links
-    └── footer.php      # Copyright & JS Scripts
