@@ -32,7 +32,6 @@ Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah P
 * **Styling:** Custom CSS (Neon & Glassmorphism Effects)
 * **Server:** Apache (XAMPP/Laragon)
 
----
 
 ## ✨ Fitur Utama
 
@@ -50,6 +49,43 @@ Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah P
 * **Upload Gambar:** Fitur upload gambar produk ke server.
 * **Pencarian Canggih:** Filter barang berdasarkan Nama atau Kategori.
 * **Pagination:** Pembagian halaman data otomatis jika produk banyak.
+
+---
+
+## 📸 Dokumentasi & Screenshot Aplikasi
+
+Berikut adalah dokumentasi lengkap alur penggunaan aplikasi:
+
+### 1. Proses Login (Autentikasi)
+Halaman login dengan validasi Role. Admin dan User memiliki dashboard yang berbeda.
+![Halaman Login](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215525.png?raw=true)
+
+### 2. Halaman Utama (Dashboard)
+Tampilan awal setelah login berhasil, menampilkan ringkasan toko.
+![Halaman Dashboard](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215619.png?raw=true)
+
+### 3. Katalog Produk (Read & Pagination)
+Menampilkan daftar barang dengan desain Grid. Terdapat fitur **Pagination** di bagian bawah.
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215722.png?raw=true)
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215809.png?raw=true)
+
+### 4. Proses Pencarian (Filter Search)
+Fitur pencarian barang berdasarkan nama atau kategori secara real-time.
+![Fitur Search](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215902.png?raw=true)
+
+### 5. Proses Tambah Data (Create) - *Admin Only*
+Formulir untuk memasukkan data barang baru dan upload gambar produk.
+![Form Tambah Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220517.png?raw=true)
+![Form Tambah Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220533.png?raw=true)
+### 6. Proses Edit Data (Update) - *Admin Only*
+Formulir untuk mengubah informasi stok atau harga barang.
+![Form Edit Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220638.png?raw=true)
+
+
+### 7. Hapus Data (Delete) - *Admin Only*
+Validasi konfirmasi (alert) sebelum menghapus data untuk mencegah kesalahan.
+![Konfirmasi Hapus](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220719.png?raw=true)
+![Produk telah di Hapus](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220728.png?raw=true)
 
 ---
 
