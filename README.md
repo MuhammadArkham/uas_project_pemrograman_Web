@@ -13,7 +13,7 @@ PEMROGRAMAN WEB 1
 ## 📖 Deskripsi Project
 **Arkham Store** adalah aplikasi berbasis web yang dirancang untuk mengelola inventaris toko elektronik. Aplikasi ini dibangun menggunakan **PHP Native** dengan pendekatan **Object-Oriented Programming (OOP)** dan struktur **Modular** sesuai dengan ketentuan tugas.
 
-Selain fungsionalitas CRUD (Create, Read, Update, Delete), aplikasi ini  menggunakan framework **Bootstrap 5** dengan kustomisasi *Glassmorphism*.
+Selain fungsionalitas CRUD (Create, Read, Update, Delete), aplikasi ini  menggunakan framework **Bootstrap 5** dan dicustom.
 
 ### 🎯 Tujuan Project
 Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Web, dengan fokus pemenuhan syarat:
@@ -24,7 +24,33 @@ Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah P
 5.  Sistem Login Multi-Role (Admin & User).
 
 ---
+## 📂 Struktur Direktori
+Struktur folder disusun rapi untuk memisahkan *Logic*, *View*, dan *Assets*:
 
+```text
+uas_project/
+├── .htaccess           # Konfigurasi Routing (RewriteRule)
+├── config.php          # Konfigurasi Database Credentials
+├── index.php           # Main Router (Gerbang Utama Aplikasi)
+├── db_toko.sql         # File Database SQL
+├── README.md           # Dokumentasi Project
+│
+├── class/              # Core Logic (OOP)
+│   └── Database.php    # Class untuk koneksi & query DB
+│
+├── img/                # Penyimpanan file gambar produk
+│   ├── mouse.jpg
+│   └── ...
+│
+├── module/             # Modular Business Logic
+│   ├── auth/           # Login & Logout logic
+│   ├── barang/         # CRUD Barang (Katalog, Tambah, Edit, Hapus)
+│   └── home/           # Dashboard Page
+│
+└── template/           # Layout Views
+    ├── header.php      # Navbar & CSS Links
+    └── footer.php      # Copyright & JS Scripts
+```
 ## 🛠️ Teknologi yang Digunakan
 * **Backend:** PHP Native (v8.x recommended)
 * **Database:** MySQL / MariaDB
@@ -52,6 +78,91 @@ Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah P
 
 ---
 
+
+---
+
+### Implementasi Kode
+
+```markdown
+---
+
+##  Implementasi Kode Utama
+
+Berikut adalah cuplikan kode penting yang menunjukkan penerapan konsep **OOP** dan **Modular** dalam aplikasi ini:
+
+### 1. Penerapan OOP (Koneksi Database)
+Menggunakan Class `Database` untuk membungkus koneksi MySQLi, sehingga penulisan kode lebih rapi dan aman (*Encapsulation*).
+
+```php
+// File: class/Database.php
+class Database {
+    private $host = "localhost";
+    private $user = "root";
+    private $pass = "";
+    private $db   = "db_toko";
+    public $mysqli;
+
+    public function __construct() {
+        $this->mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
+        
+        if ($this->mysqli->connect_error) {
+            die("Koneksi gagal: " . $this->mysqli->connect_error);
+        }
+    }
+}
+
+```
+
+### 2. Penerapan Modular & Routing
+
+Menggunakan logika `switch-case` pada `index.php` untuk memanggil modul berdasarkan parameter URL. Ini membuat URL lebih bersih dan terstruktur.
+
+```php
+// File: index.php
+$mod = isset($_GET['mod']) ? $_GET['mod'] : 'home';
+
+switch ($mod) {
+    case 'home':
+        include 'module/home/index.php';
+        break;
+    case 'barang':
+        include 'module/barang/index.php';
+        break;
+    case 'auth':
+        include 'module/auth/index.php';
+        break;
+    default:
+        include 'module/home/index.php';
+        break;
+}
+
+```
+
+### 3. Kustomisasi UI 
+
+Kode CSS untuk menciptakan efek kartu transparan yang futuristik pada halaman Katalog.
+
+```css
+/* File: template/header.php (Style Block) */
+.card-space {
+    background: rgba(30, 41, 59, 0.7); /* Transparan */
+    backdrop-filter: blur(10px);        /* Efek Blur Kaca */
+    border: 1px solid rgba(6, 182, 212, 0.3); /* Border Neon */
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.text-neon {
+    color: #06b6d4;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+---
+
+
+---
+```
 ## 📸 Dokumentasi & Screenshot Aplikasi
 
 Berikut adalah dokumentasi lengkap alur penggunaan aplikasi:
