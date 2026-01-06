@@ -23,6 +23,18 @@ Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah P
 4.  Desain **Responsive Mobile-First** menggunakan Bootstrap.
 5.  Sistem Login Multi-Role (Admin & User).
 
+## Link Demo Aplikasi
+
+Aplikasi sudah di-hosting dan dapat diakses di sini:
+- **URL:** http://uas-arkham-312410545.infinityfreeapp.com
+- **Akun Admin:**
+  - Username: admin
+  - Password: admin123
+    
+- **Akun User:**
+  - Username: user
+  - Password: user123
+
 ---
 ## 📂 Struktur Direktori
 Struktur folder disusun rapi untuk memisahkan *Logic*, *View*, dan *Assets*:
