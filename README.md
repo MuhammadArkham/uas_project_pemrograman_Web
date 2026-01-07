@@ -10,12 +10,10 @@ PEMROGRAMAN WEB 1
 
 ---
 
-## 📖 Deskripsi Project
-**Arkham Store** adalah aplikasi berbasis web yang dirancang untuk mengelola inventaris toko elektronik. Aplikasi ini dibangun menggunakan **PHP Native** dengan pendekatan **Object-Oriented Programming (OOP)** dan struktur **Modular** sesuai dengan ketentuan tugas.
+##  Deskripsi Project
+ Aplikasi ini adalah sistem berbasis web yang dirancang untuk mengelola data penjualan dan stok barang. Aplikasi dikembangkan dengan konsep Object Oriented Programming (OOP) dan struktur Modular, serta menerapkan routing aplikasi menggunakan .htaccess. Tujuan utama aplikasi ini adalah mempermudah pengelolaan data barang (gadget & komputer) secara efisien,Selain fungsionalitas CRUD (Create, Read, Update, Delete), aplikasi ini  menggunakan framework **Bootstrap 5** dan dicustom.
 
-Selain fungsionalitas CRUD (Create, Read, Update, Delete), aplikasi ini  menggunakan framework **Bootstrap 5** dan dicustom.
-
-### 🎯 Tujuan Project
+###  Tujuan Project
 Project ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Web, dengan fokus pemenuhan syarat:
 1.  Implementasi konsep **OOP (Class & Object)** dalam koneksi database.
 2.  Penerapan struktur **Modular** untuk kemudahan maintenance.
@@ -63,7 +61,7 @@ uas_project/
     ├── header.php      # Navbar & CSS Links
     └── footer.php      # Copyright & JS Scripts
 ```
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 * **Backend:** PHP Native (v8.x recommended)
 * **Database:** MySQL / MariaDB
 * **Frontend:** HTML5, CSS3, Bootstrap 5.3
@@ -71,36 +69,63 @@ uas_project/
 * **Server:** Apache (XAMPP/Laragon)
 
 
-## ✨ Fitur Utama
+##  Fitur Utama
 
 ### 1. Arsitektur & Keamanan
-* ✅ **OOP Database Wrapper:** Semua koneksi dan query database dibungkus dalam Class `Database.php`.
-* ✅ **Modular System:** File logika dipisah berdasarkan modul (`auth`, `barang`, `home`).
-* ✅ **Routing System:** URL bersih dan aman menggunakan `.htaccess` (contoh: `?mod=barang&page=katalog`).
-* ✅ **Session Management:** Sistem login aman dengan validasi sesi.
-
+*  **OOP Database Wrapper:** Semua koneksi dan query database dibungkus dalam Class `Database.php`.
+*  **Modular System:** File logika dipisah berdasarkan modul (`auth`, `barang`, `home`).
+*  **Routing System:** URL menggunakan `.htaccess` (contoh: `?mod=barang&page=katalog`).
+*  **Session Management:** Sistem login aman dengan validasi sesi.
+  
 ### 2. Fitur Fungsional
 * **Multi-Role Login:**
-    * 🔐 **Admin:** Akses penuh (CRUD), Manajemen Data, Upload Gambar.
-    * 👤 **User:** View Only, Searching, Filtering, Pagination.
+    *  **Admin:** Akses penuh (CRUD), Manajemen Data, Upload Gambar.
+    *  **User:** View Only, Searching, Filtering, Pagination.
 * **Manajemen Produk (CRUD):** Tambah, Edit, Hapus, dan Lihat data barang.
 * **Upload Gambar:** Fitur upload gambar produk ke server.
 * **Pencarian Canggih:** Filter barang berdasarkan Nama atau Kategori.
 * **Pagination:** Pembagian halaman data otomatis jika produk banyak.
 
+## Pemenuhan Ketentuan UAS
+Berikut adalah penjelasan teknis mengenai implementasi fitur berdasarkan syarat soal UAS:
+
+### 1. Project Praktikum OOP dan Modular
+* **OOP (Object Oriented Programming):** Sistem koneksi database tidak lagi prosedural, melainkan dibungkus dalam **Class `Database`** (`class/Database.php`) dengan properti dan method (`__construct`, `query`, dll) untuk menerapkan konsep *Encapsulation*.
+* **Modular:** Struktur kode tidak menumpuk di satu file. Logika program dipecah berdasarkan fungsinya ke dalam folder `module/` (contoh: `module/auth`, `module/barang`, `module/home`).
+
+### 2. Routing App (Menggunakan .htaccess)
+* Aplikasi menggunakan teknik **Pretty URL** atau routing parameter.
+* File `.htaccess` digunakan untuk konfigurasi *Rewrite Rule* agar URL lebih bersih dan aman.
+* Logika routing utama berada di `index.php` yang menggunakan `switch-case` untuk memanggil modul dinamis (`index.php?mod=barang&page=add`).
+
+### 3. Desain Responsive (Mobile First & Framework CSS)
+* **Framework:** Menggunakan **Twitter Bootstrap 5.3** untuk tata letak Grid System.
+* **Responsive:** Tampilan otomatis menyesuaikan layar HP, Tablet, dan Desktop (Mobile First Approach).
+* **Custom Design:** Desain disempurnakan dengan tema *Dark Neon* & *Glassmorphism* (efek kaca transparan) agar lebih modern dan tidak kaku seperti template bawaan.
+
+### 4. Sistem Login dengan Role Admin dan User
+* Menggunakan **PHP Session** untuk menyimpan status login.
+* **Logic Role:**
+    * **Admin:** Diarahkan ke dashboard dengan akses penuh (Tombol Tambah/Edit/Hapus muncul).
+    * **User:** Diarahkan ke dashboard katalog belanja (Tombol manipulasi data disembunyikan/diproteksi).
+
+### 5. Fungsionalitas Lengkap (CRUD, Filter, Pagination)
+* **CRUD:** Admin sukses melakukan Create (Upload Gambar), Read (Lihat Data), Update (Edit Data), dan Delete (Hapus Data).
+* **Filter Pencarian:** Menggunakan Query SQL `LIKE` untuk mencari nama barang atau kategori secara real-time.
+* **Pagination:** Menggunakan logika `LIMIT` dan `OFFSET` pada SQL untuk membatasi jumlah produk per halaman agar loading website tetap ringan.
+  
+
 ---
 
 
----
 
-### Implementasi Kode
 
-```markdown
----
+
 
 ##  Implementasi Kode Utama
-
 Berikut adalah cuplikan kode penting yang menunjukkan penerapan konsep **OOP** dan **Modular** dalam aplikasi ini:
+
+
 
 ### 1. Penerapan OOP (Koneksi Database)
 Menggunakan Class `Database` untuk membungkus koneksi MySQLi, sehingga penulisan kode lebih rapi dan aman (*Encapsulation*).
@@ -175,7 +200,7 @@ Kode CSS untuk menciptakan efek kartu transparan yang futuristik pada halaman Ka
 
 ---
 ```
-## 📸 Dokumentasi & Screenshot Aplikasi
+##  Dokumentasi & Screenshot Aplikasi
 
 Berikut adalah dokumentasi lengkap alur penggunaan aplikasi:
 
@@ -191,9 +216,11 @@ Tampilan awal setelah login berhasil, menampilkan ringkasan toko.
 
 ### 3. Katalog Produk (Read & Pagination)
 Menampilkan daftar barang dengan desain Grid. Terdapat fitur **Pagination** di bagian bawah.
-
+#### Tampilan dari sisi user :
 ![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215722.png?raw=true)
-![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215809.png?raw=true)
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-07%20020130.png?raw=true)
+#### Tampilan dari sisi admin :
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-07%20020255.png?raw=true)
 
 ### 4. Proses Pencarian (Filter Search)
 Fitur pencarian barang berdasarkan nama atau kategori secara real-time.
