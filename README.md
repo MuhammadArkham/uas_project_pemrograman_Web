@@ -234,7 +234,7 @@ Fitur pencarian barang berdasarkan nama atau kategori secara real-time.
 Formulir untuk memasukkan data barang baru dan upload gambar produk.
 
 ![Form Tambah Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220517.png?raw=true)
-![Form Tambah Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220533.png?raw=true)
+![Form Tambah Data](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20220719.png?raw=true)
 ### 6. Proses Edit Data (Update) - *Admin Only*
 Formulir untuk mengubah informasi stok atau harga barang.
 
