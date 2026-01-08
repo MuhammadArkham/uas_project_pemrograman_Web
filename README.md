@@ -216,16 +216,19 @@ Tampilan awal setelah login berhasil, menampilkan ringkasan toko.
 
 ### 3. Katalog Produk (Read & Pagination)
 Menampilkan daftar barang dengan desain Grid. Terdapat fitur **Pagination** di bagian bawah.
+#### Tampilan jika belum login:
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-08%20101826.png?raw=true)
+
 #### Tampilan dari sisi user :
-![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215722.png?raw=true)
-![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-07%20020130.png?raw=true)
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-08%20101701.png?raw=true)
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-08%20101804.png?raw=true)
 #### Tampilan dari sisi admin :
-![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-07%20020255.png?raw=true)
+![Katalog Produk](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-08%20101854.png?raw=true)
 
 ### 4. Proses Pencarian (Filter Search)
 Fitur pencarian barang berdasarkan nama atau kategori secara real-time.
 
-![Fitur Search](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-06%20215902.png?raw=true)
+![Fitur Search](https://github.com/MuhammadArkham/uas_project_pemrograman_Web/blob/main/DOKUMENTASI%20PROJECT/Screenshot%202026-01-08%20101804.png?raw=true)
 
 ### 5. Proses Tambah Data (Create) - *Admin Only*
 Formulir untuk memasukkan data barang baru dan upload gambar produk.
