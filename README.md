@@ -34,8 +34,8 @@ Aplikasi sudah di-hosting dan dapat diakses di sini:
   - Password: user123
 
  ## Dokumentasi
-  Link Youtube : https://youtu.be/1r5WgtZQ_1M?si=SmhbSUgMcw8eZAFO 
-
+- Link Youtube : https://youtu.be/1r5WgtZQ_1M?si=SmhbSUgMcw8eZAFO 
+- [Dokumentasi PDF](https://drive.google.com/file/d/13Rv3WfdWy4G8dxUcQDKDPja-ICnFa4E0/view?usp=drive_link)
 ---
 ## 📂 Struktur Direktori
 Struktur folder disusun rapi untuk memisahkan *Logic*, *View*, dan *Assets*:
